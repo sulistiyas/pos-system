@@ -51,7 +51,7 @@ class DetailTransactionResource extends Resource
                 Tables\Columns\TextColumn::make('id_transaction')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('id_product')
+                Tables\Columns\TextColumn::make('product.product_name')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('detail_transaction_qty')
