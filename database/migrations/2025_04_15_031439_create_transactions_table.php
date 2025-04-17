@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id('id_transaction');
-            $table->date('transaction_date');
+            $table->integer('transaction_date');
+            $table->integer('transaction_month');
+            $table->integer('transaction_year');
             $table->integer('transaction_total');
             $table->bigInteger('id_customer')->unsigned();
             $table->foreign('id_customer')->references('id_customer')->on('customers')->onDelete('cascade');

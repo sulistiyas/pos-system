@@ -13,6 +13,8 @@ class Transaction extends Model
     protected $fillable = [
         'id_customer',
         'transaction_date',
+        'transaction_month',
+        'transaction_year',
         'transaction_total',
         'transaction_status',
     ];

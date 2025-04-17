@@ -18,7 +18,9 @@ class CreateTransaction extends CreateRecord
         
         $transcation_data = static::getModel()::create([
             'id_customer' => $data['id_customer'],
-            'transaction_date' => date('Y-m-d'),
+            'transaction_date' => date('d'),
+            'transaction_month' => date('m'),
+            'transaction_year' => date('Y'),
             'transaction_total' => $data['detail_transaction_subtotal'],
 
             // 'transaction_status' => $data['transaction_status'],
